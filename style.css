@@ -115,6 +115,7 @@ display: block;
 object-fit: cover;
 object-position: center;
 }
+
 .scroll-note {
   position: absolute; bottom: 24px; left: 28px; color: var(--muted);
   font: 10px "DM Mono", monospace; letter-spacing: .12em;
@@ -232,30 +233,113 @@ object-position: center;
 .contact .eyebrow { text-align: center; }
 .contact h2 { font-size: clamp(60px, 9vw, 120px); }
 .contact-copy { color: var(--muted); max-width: 520px; margin: 25px auto 30px; }
-.contact-actions { justify-content: center; }
-.social { font: 11px "DM Mono", monospace; color: var(--muted); padding: 12px; }
-.social:hover { color: var(--text); }
+.contact-actions { justify-content: center; position: relative; }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    text-decoration: none;
+
+    font-size: 35px;
+    transition: 0.3s ease;
+}
+
+.github {
+    color: var(--text);
+}
+
+.facebook {
+    color: rgba(0, 68, 255, 0.986);
+}
+
+.instagram {
+    color: rgb(255, 0, 200);
+}
+
+.x {
+    color: var(--text);
+}
+
+.linkedin {
+    color: rgb(0, 81, 255);
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    opacity: 0.85;
+}
 
 footer {
   max-width: var(--max); margin: auto; padding: 25px 28px 40px;
   display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;
   border-top: 1px solid var(--line); color: var(--muted); font: 9px "DM Mono", monospace;
 }
-.whatsapp {
-position: fixed;
-right: 20px;
-bottom: 20px;
-width: 58px;
-height: 58px;
-background: #5efa03;
-color: white;
-border-radius: 25%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 25px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.555);
-z-index: 999;
+
+.floating-email,
+.floating-whatsapp {
+  position: fixed;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  padding: 0 11px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow: hidden;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.555);
+  z-index: 999;
+  transition: width 0.3s ease, gap 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-email {
+  bottom: 90px;
+  background-color: rgb(141, 92, 1);
+}
+
+.floating-whatsapp {
+  bottom: 40px;
+  background-color: #009637;
+}
+
+.floating-email:hover,
+.floating-email:focus-visible,
+.floating-whatsapp:hover,
+.floating-whatsapp:focus-visible {
+  width: 145px;
+  gap: 8px;
+}
+
+.floating-email span,
+.floating-whatsapp span {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  font: 600 12px "Manrope", sans-serif;
+  transition: max-width 0.3s ease, opacity 0.2s ease;
+}
+
+.floating-email:hover span,
+.floating-email:focus-visible span,
+.floating-whatsapp:hover span,
+.floating-whatsapp:focus-visible span {
+  max-width: 100px;
+  opacity: 1;
 }
 
 .cursor-glow {
