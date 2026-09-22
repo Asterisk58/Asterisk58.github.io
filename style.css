@@ -289,8 +289,8 @@ footer {
 .floating-whatsapp {
   position: fixed;
   right: 15px;
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   padding: 0 11px;
   border-radius: 10px;
   display: flex;
@@ -299,7 +299,7 @@ footer {
   gap: 0;
   overflow: hidden;
   color: white;
-  font-size: 22px;
+  font-size: 35px;
   text-decoration: none;
   white-space: nowrap;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.555);
@@ -313,7 +313,7 @@ footer {
 }
 
 .floating-whatsapp {
-  bottom: 40px;
+  bottom: 30px;
   background-color: #009637;
 }
 
