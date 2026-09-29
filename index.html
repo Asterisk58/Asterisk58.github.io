@@ -1,236 +1,490 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio of an engineering student, builder and lifelong learner.">
-  <title>Asterisk, Engineering Student & Builder</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of an engineering student, builder and lifelong learner.">
+    <title>Newton M. Wanyoike | Civil Engineering Student & Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <div class="cursor-glow"></div>
-
-  <header class="nav">
-    <a class="brand" href="#home" aria-label="Home">
-      <span class="brand-mark">🏗️</span>
-      <span class="brand-text">Home</span>
-    </a>
+    <div class="scroll.progress" id="scrollProgress"></div>
+<header class="navbar">
+    <div class="logo-area">
+        <div class="logo">
+            <span>N</span><span>M</span>
+        </div>
+        <div class="logo-divider"></div>
+        <div class="name">
+            Newton M. Wanyoike
+        </div>
+    </div>
 
     <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#learning">Learning</a>
-      <a href="#contact">Contact</a>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☼</button>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-  </header>
-
-  <main>
-    <section class="hero section" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> ENGINEERING STUDENT · NAIROBI</p>
-        <h1>Building ideas<br><em>into something real.</em></h1>
-        <p class="hero-text">
-          Hello there! My name is Newton Wanyoike, I'm a student pursuing Bachelor of Technology in 
-          Civil Engineering student at The Technical University of Kenya developing a foundation in structural
-          engineering while teaching myself how tech can make ideas easier to build, 
-          share, and scale.<br>
-          For the longest time, i've been fascinated by structures, technology, design,
-          and the process of turning curiosity into useful things.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">Explore my work</a>
-          <a class="btn btn-ghost" href="#contact">Let's connect</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="profile-photo">
-          <img src="Asterisk.png" alt="Profile photo of Engr. Newton Wanyoike">
-        </div>
-      </div>
-     
-      <div class="scroll-note"><span></span> SCROLL TO EXPLORE</div>
-    </section>
-
-    <section class="marquee" aria-label="Interests">
-      <div>ENGINEERING <span>✦</span> TECHNOLOGY <span>✦</span> DESIGN <span>✦</span> MUSIC <span>✦</span> BOOKS <span>✦</span> CURIOSITY <span>✦</span> </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">01 / ABOUT</p>
-        <h2>Still learning.<br><em>Already building.</em></h2>
-      </div>
-
-      <div class="about-content">
-        <div class="about-text">
-          <p class="lead">
-            I enjoy going beyond the syllabus — from programming and web development
-            to engineering software, working on my small personal projects, exploring big business ideas, 
-            listening to music and reading books that make me question how I see the world.
-          </p>
-          <p>
-            I started learning web development recently and judging by the works I've done (including this one), I can proudly say that I have 
-            made a massive amount of progress. I have also acquinted myself with some of the technical drawing and analysis software
-            and worked on a few projects. These are not claims of mastery — they're the areas I'm actively developing.
-            <br>
-            My long-term goal is to build a career in the construction industry combining engineering, technology and entrepreneurship
-            to design practical, economical and reliable solutions to some real world problems
-          </p>
-          <p>Here's what you need to know about me and my engineering journey</p>
-        </div>
-      
-        <div class="facts">
-          <div class="fact"><span>01</span><strong>CURIOUS</strong><small>Always learning something new.</small></div>
-          <div class="fact"><span>02</span><strong>THOUGHTFUL</strong><small>Ideas matter before execution.</small></div>
-          <div class="fact"><span>03</span><strong>BUILDER</strong><small>Learn → experiment → improve.</small></div>
-          <div class="fact"><span>04</span><strong>FUTURE-FOCUSED</strong><small>Engineering with an entrepreneurial mindset.</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section work" id="work">
-      <div class="section-heading row-heading">
-        <div>
-          <p class="eyebrow">02 / SELECTED WORK</p>
-          <h2>Things I've been<br><em>building & exploring.</em></h2>
-        </div>
-        <p class="section-note">A growing collection of experiments, ideas and engineering work.</p>
-      </div>
-
-      <div class="projects">
-        <article class="project project-large">
-          <div class="project-number">01</div>
-          <div class="project-icon">▱</div>
-          <p class="project-type">WEB · BUSINESS</p>
-          <h3>Construction<br>Business Platform</h3>
-          <p>A concept for a modern construction company brand and website — focused on trust, strong foundations and technology.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>Branding</span></div>
-          <span class="project-arrow">↗</span>
-        </article>
-
-        <article class="project">
-          <div class="project-number">02</div>
-          <div class="project-icon">⌘</div>
-          <p class="project-type">PROGRAMMING</p>
-          <h3>C Programming<br>Experiments</h3>
-          <p>Learning the fundamentals of C through functions, arrays, strings, structures and engineering-flavoured problems.</p>
-          <div class="tags"><span>C</span><span>Logic</span><span>Algorithms</span></div>
-          <span class="project-arrow">↗</span>
-        </article>
-
-        <article class="project">
-          <div class="project-number">03</div>
-          <div class="project-icon">⌂</div>
-          <p class="project-type">ENGINEERING</p>
-          <h3>Digital<br>Engineering Skills</h3>
-          <p>Exploring CAD, technical drawing, BIM concepts and other engineering software & tools used to turn engineering ideas into workable designs.</p>
-          <div class="tags"><span>CAD</span><span>BIM</span><span>Design</span></div>
-          <span class="project-arrow">↗</span>
-        </article>
-
-        <article class="project project-wide">
-          <div class="project-number">04</div>
-          <div class="project-icon">◌</div>
-          <p class="project-type">PERSONAL SYSTEM</p>
-          <h3>Learning<br>Architecture</h3>
-          <p>A personal approach to studying, reading, fitness, reflection and skill-building — designed around consistency rather than perfection.</p>
-          <div class="tags"><span>Learning</span><span>Systems</span><span>Growth</span></div>
-          <span class="project-arrow">↗</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="section learning" id="learning">
-      <div class="section-heading">
-        <p class="eyebrow">03 / CURRENTLY LEARNING</p>
-        <h2>My toolbox<br><em>is still growing.</em></h2>
-      </div>
-
-      <div class="skill-layout">
-        <div class="skill-intro">
-          <p class="lead">Engineering gives me the problem. Technology gives me more ways to solve it.</p>
-          <p>These are not claims of mastery — they're the areas I'm actively developing.</p>
-        </div>
-
-        <div class="skills">
-          <div class="skill"><span>01</span><div><b>C / PROGRAMMING</b><small>Fundamentals · problem solving</small></div><i>LEARNING</i></div>
-          <div class="skill"><span>02</span><div><b>HTML / CSS / JS</b><small>Web development · interfaces</small></div><i>BUILDING</i></div>
-          <div class="skill"><span>03</span><div><b>CAD / BIM</b><small>Technical drawing · digital design</small></div><i>EXPLORING</i></div>
-          <div class="skill"><span>04</span><div><b>CIVIL ENGINEERING</b><small>Structures · materials · systems</small></div><i>STUDYING</i></div>
-          <div class="skill"><span>05</span><div><b>ENTREPRENEURSHIP</b><small>Business · construction · strategy</small></div><i>EXPLORING</i></div>
-        </div>
-      </div>
-
-      <div class="quote-card">
-        <span class="quote-mark">“</span>
-        <p>...The most important thing is to never stop questioning.</p>
-        <small>— A mindset worth carrying into engineering.</small>
-      </div><br>
-  
-      </div>
-    </section>
- <section class="section contact" id="contact">
-      <p class="eyebrow">04 / CONTACT</p>
-      <h2>Have an idea?<br><em>Let's build.</em></h2>
-      <p class="contact-copy">I'm open to conversations about engineering, technology, projects, learning and interesting ideas. Click the links below to get in touch!</p>
-   <div class="contact-actions">
-      <div class="social-links">
-
-       <a href="https://github.com/Asterisk58" class="github">
-        <i class="fa-brands fa-github"></i>
-       </a>
-
-       <a href="https://www.facebook.com/share/1Dv1ifxJnP/" class="facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-       </a>
-
-       <a href="https://www.instagram.com/as_ter_.isk?stkn=bmRsMGo2YzJnN2g=" class="instagram">
-        <i class="fa-brands fa-instagram"></i>
-       </a>
-
-       <a href="https://x.com/Wanyoike_newton" class="x">
-        <i class="fa-brands fa-x-twitter"></i>
+    <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch to light theme">☀</button>
+        <a href="#myresume" class="resume-btn">
+            <i class="fa-solid fa-download"></i>
+            Resume
         </a>
 
-       <a href="https://www.linkedin.com/in/newton-wanyoike-583211333 " class="linkedin">
-        <i class="fa-brands fa-linkedin-in"></i>
-       </a>
-      </div>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </div>
- </section>
-  </main>
+</header>
 
-  <footer>
-    <span>© <span id="year"></span> ASTERISK</span>
-    <span>BUILT WITH HTML · CSS · JAVASCRIPT</span>
-    <a href="#home">BACK TO TOP ↑</a>
-  </footer>
 
- 
+<!-- ================= HERO ================= -->
 
-  <script src="script.js"></script>
+<main>
 
-   <a href="https://wa.me/qr/36GNTBUI5DU6P1"
-     class="floating-whatsapp"
-     target="_blank">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>Chat with me</span>
+<section class="hero" id="home">
+
+    <!-- Background image -->
+    <div class="hero-background"></div>
+
+    <!-- Dark overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <div class="hero-text">
+            <div class="eyebrow"><small>
+                CIVIL ENGINEERING STUDENT
+                <span>|</span>
+                FRONT-END WEB DEVELOPER</small>
+            </div>
+
+            <h1>
+                Hi, I'm<br><span>Newton Wanyoike</span>
+            </h1>
+
+            <p class="hero-description">
+                A Civil Engineering student at TUK developing a foundation in structural
+                engineering while teaching myself how tech can make ideas easier to build, 
+                share, and scale.<br></br>
+                I am passionate about building solutions that make an impact in the real world by combining engineering, technology and entrepreneurship
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#about" class="primary-btn">
+                    <i class="fa-regular fa-user"></i>
+                    About Me
+                </a>
+                <a href="#projects" class="secondary-btn">
+                    <i class="fa-solid fa-code"></i>
+                    My Projects
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= INFO STRIP ================= -->
+
+<section class="info-strip">
+    <div class="info-card">
+        <div class="info-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div>
+            <h3>2nd Year</h3>
+            <p>BTech Civil Engineering<br>(TUK)</p>
+        </div>
+    </div>
+    <div class="info-card">
+        <div class="info-icon">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        <div>
+            <h3>Learning</h3>
+            <p>C, Web Development,<br>CAD & BIM</p>
+        </div>
+    </div>
+    <div class="info-card">
+        <div class="info-icon">
+            <i class="fa-solid fa-building"></i>
+        </div>
+        <div>
+            <h3>Building</h3>
+            <p>Skills for a stronger<br>future</p>
+        </div>
+    </div>
+    <div class="info-card">
+        <div class="info-icon">
+            <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div>
+            <h3>Growing</h3>
+            <p>Mindset . Discipline<br>Impact</p>
+        </div>
+    </div>
+</section>
+<section class="section about-section" id="about">
+        <div class="section-heading">
+            <span>01 - ABOUT ME</span>
+            <h2>Building a future,<br><strong>one skill at a time .</strong></h2>
+        </div>
+
+<div class="about-grid">
+<div class="about-text">
+    <p class="lead">
+        <h2>Building is not just what I study.</h2><br>
+        I have always been fascinated by structures and curious about how ideas become 
+        designs, and how those designs become the structures that shape the world around us.
+    </p>
+        
+    <p>
+        This is the main reason I chose to pursue a degree in Civil Engineering Technology. However, 
+        Engineering is more than designing structures. It's about understanding problems, thinking critically, and
+        having the ability to create solutions that improve the way people live.<br></br>
+        To be better equipped I decided to learn programming, web development, CAD and other digital tools alongside my 
+        engineering studies. These skills allow me to approach engineering from different perspectives.
+    </p>
+    <p>
+        My long-term vision is to combine engineering, technology and entrepreneurship to build
+        meaningful projects and develop practical, economical, and reliable solutions. Eventually,
+        I hope to establish a construction company of my own.
+    </p>
+    <p>
+        Aside from engineering and chasing my goals, I am a curious person who loves listening to music, reading books,
+        sharing deep thoughts and meaningful conversations, and exploring random things that catch my interest.
+        There is still a lot I am learning about myself−what I value, and what kind of person I want to become.
+    </p>
+    <a href="#journey" class="text-link">
+        Explore my journey
+        <i class="fa-solid fa-arrow-right"></i>
     </a>
-
-   <a href="mailto:newtonwanyoike594@gmail.com"
-     class="floating-email">
-     <i class="fa-solid fa-envelope"></i>
-     <span>Email me</span>
-  </a>
-
+    <a href="#contact" class="text-link">
+        Let's connect
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
 </div>
 
+<div class="about-cards">
+<div class="about-card">
+    <i class="fa-solid fa-compass-drafting"></i>
+    <h3>Engineer</h3>
+    <p>I am learning to design, analyze and build solutions that stand on strong foundations.</p>
+</div>
+
+<div class="about-card">
+    <i class="fa-solid fa-laptop-code"></i>
+    <h3>Technologist</h3>
+    <p>Exploring programming, web development and digital tools for modern engineering.</p>
+</div>
+
+<div class="about-card">
+    <i class="fa-solid fa-lightbulb"></i>
+    <h3>Problem Solver</h3>
+    <p>Curious about difficult problems and always looking for better ways to approach them.</p>
+</div>
+
+<div class="about-card">
+    <i class="fa-solid fa-rocket"></i>
+    <h3>Entrepreneur</h3>
+    <p>Developing the mindset to eventually turn ideas into useful businesses and projects.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section skills-section" id="skills">
+    <div class="section-heading center">
+        <span>02 — SKILLS</span>
+        <h2>Tools I'm learning<br><strong>to build better.</strong></h2>
+        <p>A combination of engineering fundamentals, digital tools and creative problem-solving.</p>
+    </div>
+
+    <div class="skills-grid">
+        <div class="skill-box">
+            <div class="skill-top">
+                <i class="fa-solid fa-building"></i>
+                <span>01</span>
+            </div>
+
+            <h3>Civil Engineering</h3>
+            <p>Engineering graphics, construction principles, strenth of materials, analysis of structures and aproach to problem solving process.</p>
+
+            <div class="skill-tags">
+                <span>Construction</span>
+                <span>Structures</span>
+                <span>Engineering Graphics</span>
+            </div>
+        </div>
+
+
+        <div class="skill-box">
+            <div class="skill-top">
+                <i class="fa-solid fa-code"></i>
+                <span>02</span>
+            </div>
+
+            <h3>Programming</h3>
+            <p>Developing logical thinking and programming fundamentals through practical projects.</p>
+
+            <div class="skill-tags">
+                <span>C</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-top">
+                <i class="fa-solid fa-cubes"></i>
+                <span>03</span>
+            </div>
+
+            <h3>CAD & BIM</h3>
+            <p>Exploring digital design tools and workflows used in modern architecture and construction.</p>
+
+            <div class="skill-tags">
+                <span>CAD</span>
+                <span>BIM</span>
+                <span>3D Design</span>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-top">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>04</span>
+            </div>
+
+            <h3>Business & Marketing</h3>
+            <p>Learning how products, services and ideas can be presented, marketed and turned into businesses.</p>
+
+            <div class="skill-tags">
+                <span>Marketing</span>
+                <span>Web Design</span>
+                <span>Entrepreneurship</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section projects-section" id="projects">
+    <div class="section-heading">
+        <span>03 — PROJECTS</span>
+        <h2>Things I've been<br><strong>building.</strong></h2>
+        <p>A collection of projects, experiments and ideas from my engineering and technology journey.</p>
+    </div>
+
+
+    <div class="projects-grid">
+        <article class="project-card featured">
+            <div class="project-image">
+                <img src="images/Screenshot 2026-09-27 210614.png"
+                     alt="Personal portfolio website">
+                <div class="project-number">
+                    01
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-category">
+                    WEB DEVELOPMENT
+                </span>
+
+                <h3>Personal Portfolio</h3>
+                <p>I have built a personal digital space documenting my engineering journey, projects, skills and ideas while developing my identity as a future engineer.</p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="images/WhatsApp Image 2026-09-29 at 11.28.14.jpeg"
+                     alt="Construction project">
+                <div class="project-number">
+                    02
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-category">
+                    ENGINEERING
+                </span>
+
+                <h3>Construction Concept</h3>
+                <p>I have visited and worked in several construction sites as a construction assistant, where I have 
+                    gained insights into construction processes, structural thinking and the relationship between 
+                    design and practical implementation.
+                </p>
+
+                <div class="project-tech">
+                    <span>Civil Engineering</span>
+                    <span>Design</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-image">
+                <img src="images/WhatsApp Image 2026-09-29 at 10.50.04.jpeg"
+                     alt="Web design project">
+                <div class="project-number">
+                    03
+                </div>
+            </div>
+
+            <div class="project-content">
+                <span class="project-category">
+                    DIGITAL BUSINESS
+                </span>
+
+                <h3>Sales & Marketing Web</h3>
+                <p>
+                    I am still learning how to design commercial websites that not only look good but also communicate value and guide visitors toward taking action.
+                    I have an ongoing personal project focused on creating engaging and effective online marketing solutions. It is not yet ready to be showcased.
+                </p>
+
+                <div class="project-tech">
+                    <span>Web Design</span>
+                    <span>Marketing</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="section journey-section" id="journey">
+    <div class="section-heading center">
+        <span>04 — MY JOURNEY</span>
+        <h2>From curiosity<br><strong>to construction.</strong></h2>
+        <p>Still at the beginning — but already building.</p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+                <span>THE BEGINNING</span>
+                <h3>Started Civil Engineering</h3>
+                <p>Began my BTech Civil Engineering journey at the Technical University of Kenya and started building the foundation of my engineering career.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2025 — 2026</div>
+            <div class="timeline-content">
+                <span>EXPLORATION</span>
+                <h3>Engineering Meets Technology</h3>
+                <p>Started exploring programming, web development, CAD and digital tools alongside my engineering studies.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">NOW</div>
+            <div class="timeline-content">
+                <span>BUILDING</span>
+                <h3>Turning Knowledge Into Projects</h3>
+                <p>Applying what I learn through personal projects, digital experiments and practical engineering ideas.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item future">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">FUTURE</div>
+            <div class="timeline-content">
+                <span>THE VISION</span>
+                <h3>Building Something Bigger</h3>
+                <p>Build a career and eventually a construction company that combines strong engineering, technology and entrepreneurship.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="contact-inner">
+        <div class="contact-heading">
+            <span>06 — CONTACT</span>
+            <h2>Have an idea?<br><strong>Let's build it.</strong></h2>
+            <p>Whether it's an engineering idea, collaboration, project or simply a conversation, I'd love to hear from you.</p>
+        </div>
+
+        <div class="contact-actions">
+            <a href="mailto:newtonwanyoike594@gmail.com"
+                class="contact-button">
+                <i class="fa-regular fa-envelope"></i>
+                <div>
+                    <small>EMAIL ME</small>
+                    <span>newtonwanyoike594@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+            </a>
+
+            <a href="https://wa.me/qr/36GNTBUI5DU6P1"
+               class="contact-button">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                    <small>CHAT WITH ME</small>
+                    <span>WhatsApp</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-logo">
+        <div class="logo">
+            <span>N</span><span>M</span>
+        </div>
+        <p>Engineering. Technology. Growth.</p>
+    </div>
+
+    <div class="footer-socials">
+        
+        <a href="https://github.com/Asterisk58" class="github">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/newton-wanyoike-583211333 " class="linkedin">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://www.instagram.com/as_ter_.isk?stkn=bmRsMGo2YzJnN2g=" class="instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://x.com/Wanyoike_newton" class="x">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://www.facebook.com/share/1Dv1ifxJnP/" class="facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+    </div>
+
+    <p class="copyright">© 2026 Newton M. Wanyokole. Built with curiosity & code.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</main>
 </body>
 </html>
