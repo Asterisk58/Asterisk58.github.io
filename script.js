@@ -18,25 +18,19 @@ const scrollProgress =
    MOBILE MENU
 ========================================= */
 
+const setMenuOpen = isOpen => {
+    navLinks.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    const icon = menuToggle.querySelector("i");
+    icon.classList.toggle("fa-xmark", isOpen);
+    icon.classList.toggle("fa-bars", !isOpen);
+};
+
+menuToggle.setAttribute("aria-controls", "navLinks");
+setMenuOpen(false);
 menuToggle.addEventListener("click", () => {
-
-    navLinks.classList.toggle("open");
-
-    const icon =
-        menuToggle.querySelector("i");
-
-    if (navLinks.classList.contains("open")) {
-
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
-
-    } else {
-
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-
-    }
-
+    setMenuOpen(!navLinks.classList.contains("open"));
 });
 
 
@@ -46,16 +40,24 @@ navItems.forEach(link => {
 
     link.addEventListener("click", () => {
 
-        navLinks.classList.remove("open");
-
-        const icon =
-            menuToggle.querySelector("i");
-
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+        setMenuOpen(false);
 
     });
 
+});
+
+document.addEventListener("click", event => {
+    if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+        setMenuOpen(false);
+    }
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") setMenuOpen(false);
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) setMenuOpen(false);
 });
 
 
