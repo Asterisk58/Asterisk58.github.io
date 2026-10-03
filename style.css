@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 
 body {
@@ -36,11 +37,14 @@ body {
     padding: 0 4.5%;
     background: rgba(3, 10, 19, 0.96);
     border-bottom: 1px solid rgba(255,255,255,0.12);
-    position: relative;
-    z-index: 20;
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1000;
 }
 
+main { padding-top: 70px; }
 
+  
 /* Logo */
 
 .logo-area {
@@ -688,7 +692,6 @@ body {
 
 .project-card {
     overflow: hidden;
-
     background: #523100;
 
     border: 1px solid rgba(255,255,255,.08);
@@ -998,7 +1001,7 @@ body {
     background:
         radial-gradient(
             circle at 50% 100%,
-            rgba(22,132,255,.13),
+            rgba(2, 119, 253, 0.205),
             transparent 45%
         ),
         black;
@@ -1016,6 +1019,9 @@ body {
     gap: 90px;
 
     align-items: center;
+}
+.contact-inner p {
+    color: #8996a6;;
 }
 
 .contact-heading p {
@@ -1064,12 +1070,6 @@ body {
     transform: translateX(5px);
 }
 
-.contact-button > i:first-child {
-    font-size: 25px;
-
-    color: #1684ff;
-}
-
 .contact-button small {
     display: block;
 
@@ -1088,8 +1088,49 @@ body {
 
 .contact-button .arrow {
     font-size: 13px;
-
     color: #526174;
+}
+
+.contact-button .fa-regular.fa-envelope {
+    font-size: 25px;
+    color: #ff806e;
+}
+
+.contact-button .fa-brands.fa-whatsapp {
+    font-size: 25px;
+    color: #9aff02;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.fa-brands.fa-github {
+    color: white;
+}
+.fa-brands.fa-linkedin-in {
+    color: #0166fd;
+}
+.fa-brands.fa-instagram {
+    color: blueviolet;
+}
+.fa-brands.fa-x-twitter {
+    color: white;
+}
+
+.fa-brands.fa-facebook-f {
+    color: dodgerblue;
+}
+
+.socials a {
+    font-size: 25px;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #16ffc5;
 }
 
 
@@ -1127,24 +1168,6 @@ body {
     color: #697687;
 
     font-size: 12px;
-}
-
-.footer-socials {
-    display: flex;
-
-    gap: 20px;
-}
-
-.footer-socials a {
-    color: #7d8998;
-
-    font-size: 18px;
-
-    transition: .3s;
-}
-
-.footer-socials a:hover {
-    color: #16ffc5;
 }
 
 .copyright {
@@ -1560,8 +1583,35 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.8,.2,1); }
 .reveal.show { opacity: 1; transform: translateY(0); }
 
-@media (max-width: 800px) {
-    .nav-links { background: rgba(12,17,32,.98); border: 1px solid rgba(56,224,192,.22); box-shadow: 0 18px 45px rgba(0,0,0,.35); }
+@media (max-width: 900px) {
+    .navbar { padding: 0 20px; }
+    .menu-toggle { display: inline-flex; align-items: center; justify-content: center; min-width: 42px; min-height: 42px; border-radius: 8px; }
+    .nav-actions { gap: 12px; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 20px;
+        left: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 16px;
+        background: rgba(12,17,32,.98);
+        border: 1px solid rgba(56,224,192,.22);
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 18px 45px rgba(0,0,0,.35);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { height: auto; min-height: 48px; }
+    .nav-links a.active::after { bottom: 4px; width: 32px; }
+}
+
+@media (max-width: 520px) {
+    .navbar { padding: 0 14px; }
+    .nav-actions { gap: 8px; }
+    .resume-btn { padding: 9px 12px; }
+    .nav-links { left: 14px; right: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1602,22 +1652,22 @@ body.light-mode .copyright {
     color: #192436;
 }
 
-body.light-mode .info-strip { background: linear-gradient(110deg, #e8f0f8, #f1effa 55%, #e9f5f4); }
-body.light-mode .info-card { border-color: rgba(25,36,54,.14); }
+body.light-mode .info-strip { background: none; }
+body.light-mode .info-card { border-color: rgba(25, 36, 54, 0.267); }
 body.light-mode .section,
 body.light-mode .skills-section,
 body.light-mode .projects-section,
 body.light-mode .journey-section { background-color: transparent; }
 body.light-mode .about-card,
 body.light-mode .skill-box,
-body.light-mode .project-card,
-body.light-mode .blog-card {
-    background: rgba(255,255,255,.9);
-    border-color: rgba(25,36,54,.13);
-    box-shadow: 0 12px 35px rgba(31,48,70,.08);
+body.light-mode .project-card {
+    background: rgba(255, 251, 200, 0.459);
+    border: 1px solid;
+    border-color: rgba(1, 250, 217, 0.959);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.192);
 }
 body.light-mode .hero-overlay {
-    background: linear-gradient(90deg, rgba(244,247,251,.98) 0%, rgba(244,247,251,.88) 34%, rgba(244,247,251,.48) 62%, rgba(244,247,251,.08) 100%);
+    background: linear-gradient(90deg, rgba(244,247,251,.98) 0%, rgba(244,247,251,.88) 0%, rgba(244,247,251,.48) 50%, rgba(244,247,251,.08) 100%);
 }
 body.light-mode .hero::after { background: linear-gradient(transparent, var(--ink)); }
 body.light-mode .hero h1,
@@ -1633,9 +1683,12 @@ body.light-mode .contact-heading p { color: #536176; }
 body.light-mode .skill-tags span,
 body.light-mode .project-tech span { color: #34445b; }
 body.light-mode .blog-section { background: rgba(233,238,246,.8); }
-body.light-mode .contact-button { background: rgba(255,255,255,.78); border-color: rgba(25,36,54,.14); }
+body.light-mode .contact-button { background: rgb(253, 242, 226); border-color: rgba(25, 36, 54, 0.24); }
+body.light-mode .contact-button:hover { border-color: rgb(252, 152, 2);}
 body.light-mode .footer-logo p,
 body.light-mode .footer-socials a { color: #536176; }
+body.light-mode .fa-brands.fa-github { color: black;}
+body.light-mode .fa-brands.fa-x-twitter { color: black;}
 body.light-mode .timeline-dot { box-shadow: 0 0 0 6px #fff, 0 0 18px rgba(56,224,192,.4); }
 body.light-mode .timeline-item.future .timeline-dot { background: #fff; }
 body.light-mode .menu-toggle { color: #1684aa; }
@@ -1654,7 +1707,8 @@ body.light-mode .text-link,
 body.light-mode .blog-card a { color: #8a4700; }
 body.light-mode .info-card:nth-child(3n + 2) .info-icon,
 body.light-mode .about-card:nth-child(4n + 2) i,
-body.light-mode .contact-button > i:first-child,
+body.light-mode .contact-button .fa-regular.fa-envelope {  font-size: 25px; color: #ff806e; }
+body.light-mode .contact-button .fa-brands.fa-whatsapp { font-size: 25px; color: #9aff02; }
 body.light-mode .theme-toggle { color: #006b60; }
 body.light-mode .info-card:nth-child(3n) .info-icon,
 body.light-mode .about-card:nth-child(4n + 3) i,
@@ -1669,17 +1723,18 @@ body.light-mode .skill-tags span,
 body.light-mode .project-tech span { background: #e5f3f0; border-color: #a8d5cd; }
 body.light-mode .skill-tags span:hover,
 body.light-mode .project-tech span:hover { background: #fff0dc; }
-body.light-mode .theme-toggle { border-color: rgba(0,107,96,.4); background: #e5f3f0; }
-body.light-mode .theme-toggle:hover { background: #d2ebe5; }
+body.light-mode .theme-toggle { border-color: white; background: #e5f3f0; }
+body.light-mode .theme-toggle:hover { background: #d2ebe5bb; }
 body.light-mode .secondary-btn,
-body.light-mode .resume-btn { color: #006b60; border-color: #00796b; }
+body.light-mode .resume-btn { color: #00796b; border-color: #00796b; }
 body.light-mode .secondary-btn:hover,
 body.light-mode .resume-btn:hover { color: #fff; background: #006b60; }
 body.light-mode .primary-btn { color: #241707; }
 body.light-mode a:focus-visible,
 body.light-mode button:focus-visible { outline-color: #6841a5; }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     body.light-mode .nav-links { background: rgba(255,255,255,.98); border-color: rgba(25,36,54,.14); }
 }
+
 
